@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Donate</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+
+<style>
+ /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.donate-background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cloudfront-us-east-1.images.arcpublishing.com/opb/DYMGAYAR7MMMLURMBV24ZOM5BI.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-fluid {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Donation Container */
+.donation-container {
+    background-color: rgba(255, 255, 255, 0.692);
+    padding: 30px;
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: left;
+}
+
+.donation-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #252525;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #3d3d3d;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+/* Button Styling */
+.donate-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.donate-btn:hover {
+    background-color: #218838;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgb(51, 50, 50);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 300px;
+    color: rgb(255, 255, 255);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .donation-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .donation-container h1 {
+        font-size: 20px;
+    }
+
+    input, select {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .donate-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .donation-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .donation-container h1 {
+        font-size: 18px;
+    }
+
+    input, select {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .donate-btn {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .popup {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+
+    
+</style>
+
+<body>
+    <div class="row py-3 px-lg-5">
+        <div class="col-lg-4">
+            <a href="" class="navbar-brand d-none d-lg-block">
+                <h1 class="m-0 display-5 text-capitalize font-italic"><span class="text-primary">UnityFor</span>Palestine</h1>
+            </a>
+        </div>
+        <div class="col-lg-8 text-center text-lg-right">
+            <div class="d-inline-flex align-items-center">
+                <div class="d-inline-flex flex-column text-center pr-3 border-right">
+                    <h6>Our Office</h6>
+                    <p class="m-0">123 Johor Bahru, Malaysia</p>
+                </div>
+                <div class="d-inline-flex flex-column text-center px-3 border-right">
+                    <h6>Email Us</h6>
+                    <p class="m-0">UFPALESTINE@com.my</p>
+                </div>
+                <div class="d-inline-flex flex-column text-center pl-3">
+                    <h6>Call Us</h6>
+                    <p class="m-0">+012 345 6789</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0 mb-5">
+        <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-0">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">UnityFor</span>Palestine</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-4">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link ">About</a>
+                    <a href="volunteer.html" class="nav-item nav-link active">Get Involved</a>
+                    <a href="guard.html" class="nav-item nav-link">Media</a>
+                    <a href="guard.html" class="nav-item nav-link">News</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="donate-background">
+        <div class="donation-container">
+            <h1>Support Our Cause</h1>
+            <form id="donatee" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="amount">Donation Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                </select>
+                <button type="submit" class="donate-btn">Donate Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <p>Thank you for your generous donation! Your support helps us 
+            make a real difference.</p>
+    </div>
+
+    <script>
+        document.getElementById("donatee").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            document.getElementById("popup").style.display = "block"; // Show popup
+        });
+    
+        function closePopup() {
+            document.getElementById("popup").style.display = "none"; // Hide popup
+            document.getElementById("donatee").reset(); // Reset form fields
+        }
+    </script>
+    
+
+   
+
+    <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h1 class="mb-3 display-5 text-capitalize font-italic text-white"><span class="text-primary">UNITYFOR</span>PALESTIN</h1>
+                <p class="m-0">Unity for Palestine is not just a call for solidarity it's a call for justice, peace, and the recognition of the rights of the Palestinian people. In this struggle, unity becomes our strength, empowering voices across the globe to stand together in demanding an end to the occupation and the beginning of a future where every Palestinian can live with dignity and freedom. This message reflects the importance of global unity in advocating for the rights of Palestinians. Let me know if you need any further adjustments!</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Quick Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="volunteer.html"><i class="fa fa-angle-right mr-2"></i>Get Involved</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Media</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>News</a>
+                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Johor Bahru, Malaysia</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope mr-2"></i>UFPALESTINE@com.my</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">
+                    &copy; <a class="text-white font-weight-bold" href="#">UnityForPalestin</a>. All Rights Reserved. Designed by
+                    <a class="text-white font-weight-bold" >UFP.</a>
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

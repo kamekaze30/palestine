@@ -1,0 +1,242 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Dark background for BMW theme */
+    color: white;
+}
+
+
+
+/* Hero Section */
+.hero {
+    background-image: url('https://i.guim.co.uk/img/media/5d9ea77d27c95d327caee787ddc6af484faaa567/0_0_8192_4918/master/8192.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=41d4b9214304f5c1e0d4a659f7111388');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+}
+.container-fluid {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.explore-btn {
+    background-color: #f80000;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.explore-btn:hover {
+    background-color: #00e016;
+}
+
+/* Content Section */
+.content {
+    text-align: center;
+    padding: 50px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Blog Section */
+.blog {
+    padding: 50px;
+    background-color: white;
+    color: black;
+}
+
+.blog article {
+    background: #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #f8b400;
+}
+
+/* BMW Section */
+.bmw {
+    padding: 50px;
+    background-color: black;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-image {
+    position: relative;
+    width: 60%;
+}
+
+.main-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+.button-container {
+    text-align: center;
+            margin-top: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #085c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.read-more:hover {
+    background: #00b357;
+}
+  
+.side-content {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.side-item {
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.side-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    color: black;
+}
+
+.contact input,
+.contact textarea {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact button:hover {
+    background: #218838;
+}
+
+/* Footer Section */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.newsletter input {
+    padding: 8px;
+    width: 200px;
+}
+
+.newsletter button {
+    background: green;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-image {
+        width: 90%;
+    }
+
+    .side-content {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .image-gallery img {
+        width: 90%;
+    }
+}

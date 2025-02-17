@@ -30,6 +30,11 @@ body {
     background: rgba(0, 0, 0, 0.6);
     padding: 30px;
     border-radius: 10px;
+    
+}
+
+.hero-content h1 {
+    color: white;
 }
 
 .explore-btn {

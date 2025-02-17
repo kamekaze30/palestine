@@ -63,3 +63,35 @@
     
 })(jQuery);
 
+//button success
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent actual form submission
+        
+        // Create the success message popup
+        const popup = document.createElement("div");
+        popup.textContent = "Your message has been successfully sent!";
+        popup.style.position = "fixed";
+        popup.style.top = "20px";
+        popup.style.left = "50%";
+        popup.style.transform = "translateX(-50%)";
+        popup.style.backgroundColor = "green";
+        popup.style.color = "white";
+        popup.style.padding = "10px 20px";
+        popup.style.borderRadius = "5px";
+        popup.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
+        popup.style.zIndex = "1000";
+        
+        document.body.appendChild(popup);
+        
+        // Remove the popup after 3 seconds
+        setTimeout(() => {
+            popup.remove();
+        }, 3000);
+        
+        // Clear the form fields
+        form.reset();
+    });
+});

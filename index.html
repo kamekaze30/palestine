@@ -2,12 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>UNITY FOR PALESTIN</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free Website Template" name="keywords">
-    <meta content="Free Website Template" name="description">
-
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -23,6 +17,120 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<style>
+
+    .back-to-top {
+        position: fixed;
+        display: none;
+        right: 30px;
+        bottom: 30px;
+        z-index: 11;
+        animation: action 1s infinite alternate;
+    }
+
+    .nav-bar::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: var(--dark);
+        opacity: 0.9;
+        z-index: -1;
+    }
+
+    .testimonial-carousel .owl-item.center .testimonial-text {
+        background: var(--light) !important;
+    }
+
+    .testimonial-carousel .owl-item.center .testimonial-text::after {
+        border-top: 25px solid var(--light);
+    }
+
+    .testimonial-carousel .owl-dots {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .testimonial-carousel .owl-dot {
+        position: relative;
+        display: inline-block;
+        margin: 0 5px;
+        width: 20px;
+        height: 20px;
+        background: var(--light);
+        border: 2px solid var(--primary);
+        border-radius: 20px;
+        transition: .5s;
+    }
+
+    .testimonial-carousel .owl-dot.active {
+        background: var(--primary);
+    }
+
+    @keyframes action {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-15px);
+        }
+    }
+
+    .bg-white {
+        background-color: #fff !important;
+    }
+
+    .text-primary {
+        color: #28a745;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: var(--primary);
+        border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+        background-color: #2aa75d;
+        border-color: #2aa75d;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: var(--primary);
+    }
+
+    /* Card styles */
+    .card {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+        border-radius: 5px 5px 0 0;
+    }
+
+    /* Testimonial styles */
+    .testimonial-text {
+        position: relative;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+
+    .testimonial-text::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -25px;
+        transform: translateX(-50%);
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 25px solid #f6f6f6;
+    }
+</style>
 
 <body class="bg-white">
     <!-- Topbar Start -->
@@ -53,9 +161,6 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-0">
-            <a href="" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">UNITYFOR</span>PALESTIN</h1>
-            </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -70,7 +175,6 @@
             </div>
         </nav>
     </div>
-    <!-- Navbar End -->
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
@@ -105,7 +209,6 @@
             </a>
         </div>
     </div>
-    <!-- Carousel End -->
 
     <!-- About Start -->
     <div class="container-fluid mt-5" style="background: #f6f6f6;">
@@ -131,7 +234,6 @@
                 </div>
                 <a href="https://al-shabaka.org/" class="btn btn-lg px-4 btn-primary">Learn More</a>
             </div>            
-    <!-- About End -->
 
 
     <!-- NEWS Start -->
@@ -215,8 +317,6 @@
             </div>
         </div>
     </div>  
-    <!-- NEWS End -->
-
 
     <!-- Facts Start -->
     <div class="container-fluid bg-primary my-5 py-5 text-center">
@@ -244,8 +344,6 @@
             </div>
         </div>
     </div>
-    <!-- Facts End -->
-
 
     <!-- Media Start -->
     <div class="container pt-5">
@@ -340,7 +438,6 @@
             </div>
         </div>
     </div>
-    <!-- Media End -->
 
 
     <!-- Testimonial Start -->
@@ -402,8 +499,6 @@
             </div>            
         </div>
     </div>
-    <!-- Testimonial End -->
-
 
     <!-- Recently Updated Start -->
     <div class="container pt-5">
@@ -465,7 +560,6 @@
             </div>
         </div>
     </div>
-    <!-- Recently Updated End -->
 
         <!-- feedback Start -->
         <div class="container-fluid bg-primary my-5 py-5 text-center">
@@ -480,6 +574,9 @@
                 </div>
             </form>
         </div>        
+        </div>        
+        <!-- feedback End -->
+        </div>
         <!-- feedback End -->
 
     <!-- Footer Start -->
@@ -542,8 +639,6 @@
             </div>
         </div>
     </div>
-    <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-secondary border back-to-top"><i class="fa fa-angle-double-up"></i></a>
@@ -561,7 +656,7 @@
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
-    <!-- Template Javascript -->
+    <!--Javascript -->
     <script src="js/main.js"></script>
 </body>
 

@@ -95,3 +95,9 @@ document.addEventListener("DOMContentLoaded", function () {
         form.reset();
     });
 });
+
+document.getElementById("donatee").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents actual form submission
+    alert("Thank you for your donation!"); // Optional confirmation message
+    this.reset(); // Resets the form fields
+});

@@ -175,31 +175,129 @@ Israel unilaterally withdrew its troops and settlers from Gaza in 2005, though i
             <th>Location</th>
         </tr>
         <tr>
-            <td>March 5, 2025</td>
-            <td>Culture Festival</td>
-            <td>Ramallah</td>
+            <td>March 1, 2025</td>
+            <td>Bridge of Solidarity: Connecting Hearts for Palestine</td>
+            <td>Selangor</td>
         </tr>
         <tr>
-            <td>March 10, 2025</td>
-            <td>Tech Conference</td>
-            <td>Gaza City</td>
+            <td>April 15, 2025</td>
+            <td>Hope Beyond Borders: Empowering Refugees</td>
+            <td>Kota Tinggi</td>
         </tr>
         <tr>
-            <td>March 15, 2025</td>
-            <td>Sports Tournament</td>
-            <td>Nablus</td>
+            <td>June 20, 2025</td>
+            <td>Hands of Hope: Aid for Palestine</td>
+            <td>Johor Bahru</td>
         </tr>
         <tr>
-            <td>March 20, 2025</td>
-            <td>Music Concert</td>
-            <td>Hebron</td>
+            <td>August 10, 2025</td>
+            <td>Palestine Through Art: Expressing Solidarity</td>
+            <td>Shah Alam</td>
         </tr>
         <tr>
-            <td>March 25, 2025</td>
-            <td>Art Exhibition</td>
-            <td>Jerusalem</td>
+            <td>October 5, 2025</td>
+            <td>Unity for Peace: A Global Call</td>
+            <td>Melaka</td>
         </tr>
     </table>
+
+
+    <br><br><br><section class="updateevent">
+        <h2>Upcoming Events</h2>
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide" data-date="2025-03-01T00:00:00" >
+                    <a href="campaign.html">
+                        <h4>Bridge of Solidarity: Connecting Hearts for Palestine</h4>
+                      </a>
+                    <p>This campaign aims to build a network of solidarity among nations and communities concerned about the Palestinian issue.</p>
+                    <div class="countdown"></div>
+                </div>
+                <div class="slide" data-date="2025-04-15T00:00:00">
+                    <a href="campaign.html">
+                        <h4>Hope Beyond Borders: Empowering Refugees</h4>
+                      </a>
+
+                    <p>This campaign aims to support Palestinians living as refugees in neighboring countries.</p>
+                    <div class="countdown"></div>
+                </div>
+                <div class="slide" data-date="2025-06-20T00:00:00">
+                    <a href="campaign.html">
+                        <h4>Hands of Hope: Aid for Palestine</h4>
+                      </a>
+                    <p>This campaign focuses on raising funds and providing humanitarian aid to the people of Palestine.</p>
+                    <div class="countdown"></div>
+                </div>
+                <div class="slide" data-date="2025-08-10T00:00:00">
+                    <a href="campaign.html">
+                        <h4>Palestine Through Art: Expressing Solidarity</h4>
+                      </a>
+            
+                    <p>This art campaign aims to harness creativity as a tool to voice support for Palestine.</p>
+                    <div class="countdown"></div>
+                </div>
+                <div class="slide" data-date="2025-10-05T00:00:00">
+                    <a href="campaign.html">
+                        <h4>Unity for Peace: A Global Call</h4>
+                      </a>
+                    <p>This global event seeks to unite individuals and organizations in a peaceful demonstration of solidarity for Palestine.</p>
+                    <div class="countdown"></div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="prevSlide()">&#10094; Prev</button>
+            <button onclick="nextSlide()">Next &#10095;</button>
+        </div>
+    </section>
+    
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelector(".slides");
+            const slideItems = document.querySelectorAll(".slide");
+    
+            function updateCountdown() {
+                slideItems.forEach(slide => {
+                    const eventDate = new Date(slide.getAttribute("data-date"));
+                    const countdownEl = slide.querySelector(".countdown");
+                    setInterval(() => {
+                        const now = new Date();
+                        const diff = eventDate - now;
+                        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                        countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                    }, 1000);
+                });
+            }
+    
+            function nextSlide() {
+                if (currentIndex < slideItems.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateSlidePosition();
+            }
+    
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = slideItems.length - 1;
+                }
+                updateSlidePosition();
+            }
+    
+            function updateSlidePosition() {
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+    
+            updateCountdown();
+        </script>
+
+
 
  <!-- Footer -->
  <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">

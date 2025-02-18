@@ -151,3 +151,13 @@ h2 {
         transform: translateX(-100%);
     }
 }
+
+.updateevent { font-family: Arial, sans-serif;   text-align: center; }
+    .slider-container { width: 80%; margin: auto; overflow: hidden; position: relative; }
+
+        .slides { display: flex; transition: transform 0.5s ease-in-out; }
+        .slide { min-width: 100%; box-sizing: border-box; padding: 20px; background: #ebebeb; border-radius: 2px; text-align: center; }
+        .countdown { font-size: 24px; font-weight: bold; margin-top: 10px; }
+        .buttons { margin-top: 10px; }
+        .buttons button { padding: 10px 15px; margin: 5px; cursor: pointer; }
+     

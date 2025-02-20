@@ -9,114 +9,118 @@
     </head>
 
     <style>
-        body {
-    font-family: "Raleway", sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body {
+    font-family: "Raleway", sans-serif; /* Set the font for the body */
+    background-color: #ffffff; /* Set the background color to white */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100%; /* Set body height to full screen height */
 }
 
 .background {
-    display: flex;
-    flex-direction: column;
-    background-position: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    width: 90%;
-    height: 400px;
-    max-height: 600px;
-    margin: auto;
-    position: relative;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Align children in a column */
+    background-position: center; /* Center the background image */
+    align-items: center; /* Center items horizontally */
+    overflow: hidden; /* Hide content that overflows the container */
+    background-color: white; /* Set background color to white */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Apply a soft shadow effect */
+    max-width: 900px; /* Limit max width */
+    width: 90%; /* Set width to 90% of the parent */
+    height: 400px; /* Set fixed height */
+    max-height: 600px; /* Set max height */
+    margin: auto; /* Center the element horizontally */
+    position: relative; /* Set relative positioning for later use */
 }
 
 .container {
-    display: flex;
-    gap: 0;
-    padding: 0;
-    align-items: stretch;
-    width: 100%;
-    height: 100%;
-    max-width: 900px;
-    margin: auto;
+    display: flex; /* Use flexbox layout */
+    gap: 0; /* Remove any gap between flex items */
+    padding: 0; /* Remove padding */
+    align-items: stretch; /* Stretch items to fill container height */
+    width: 100%; /* Full width of the parent */
+    height: 100%; /* Full height of the parent */
+    max-width: 900px; /* Max width to avoid excessive stretching */
+    margin: auto; /* Center the container horizontally */
 }
 
 .image {
-    flex: 1;
-    display: flex;
+    flex: 1; /* Flex item to take equal space */
+    display: flex; /* Use flexbox inside image container */
 }
 
 .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Set image width to fill container */
+    height: 100%; /* Set image height to fill container */
+    object-fit: cover; /* Ensure image fully covers container without stretching */
 }
 
 .content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
+    flex: 1; /* Flex item to take equal space */
+    display: flex; /* Use flexbox for content layout */
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
+    padding: 20px; /* Add padding inside the content */
 }
 
 .content h1 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 22px; /* Set font size for the title */
+    margin-bottom: 10px; /* Add space below the title */
 }
 
 .content p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    font-size: 14px; /* Set font size for paragraphs */
+    line-height: 1.6; /* Adjust line height for readability */
+    margin-bottom: 10px; /* Add space below the paragraph */
 }
 
 /* Responsive Design */
+
+/* For screen sizes up to 1024px */
 @media screen and (max-width: 1024px) {
     .container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
     }
 
     .image, .content {
-        width: 100%;
+        width: 100%; /* Make both image and content take full width */
     }
 
     .content {
-        padding: 15px;
-        text-align: center;
+        padding: 15px; /* Adjust padding */
+        text-align: center; /* Center text */
     }
 }
 
+/* For screen sizes up to 768px */
 @media screen and (max-width: 768px) {
     .background {
-        height: auto;
-        max-height: none;
+        height: auto; /* Allow height to auto-adjust */
+        max-height: none; /* Remove max-height restriction */
     }
 
     .content h1 {
-        font-size: 20px;
+        font-size: 20px; /* Adjust title font size */
     }
 
     .content p {
-        font-size: 13px;
+        font-size: 13px; /* Adjust paragraph font size */
     }
 }
 
+/* For screen sizes up to 480px */
 @media screen and (max-width: 480px) {
     .content {
-        padding: 10px;
+        padding: 10px; /* Reduce padding */
     }
 
     .content h1 {
-        font-size: 18px;
+        font-size: 18px; /* Reduce title font size */
     }
 
     .content p {
-        font-size: 12px;
+        font-size: 12px; /* Reduce paragraph font size */
     }
 }
 

@@ -1,163 +1,209 @@
 /* Reset & General Styles */
 body, h1, h2, h3, p, ul {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Remove default margin for consistency */
+    padding: 0; /* Remove default padding for consistency */
 }
 
 body {
-    font-family: "Raleway", sans-serif;
-    background-color: #f4f4f4;
-  
+    font-family: "Raleway", sans-serif; /* Set default font */
+    background-color: #f4f4f4; /* Set background color */
 }
-
 
 /* Main Content */
 main {
-    width: 80%;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
+    width: 80%; /* Set content width */
+    margin: 20px auto; /* Center the content */
+    background: white; /* Set background color */
+    padding: 20px; /* Add padding for spacing */
 }
 
 h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 32px; /* Set font size */
+    margin-bottom: 20px; /* Add margin for spacing */
 }
 
 /* Top News Section */
 .top-news {
-    display: flex;
-    gap: 20px;
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Add space between elements */
 }
 
 .main-article {
-    width: 65%;
+    width: 65%; /* Set width for the main article */
 }
 
 .main-article img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .main-article h2 a {
-    text-decoration: none;
-    color: #d63031;
+    text-decoration: none; /* Remove underline from links */
+    color: #d63031; /* Set link color */
 }
 
 .main-article p {
-    margin: 10px 0;
+    margin: 10px 0; /* Add vertical spacing */
 }
 
 .date {
-    font-size: 12px;
-    color: gray;
+    font-size: 12px; /* Set font size */
+    color: gray; /* Set text color */
 }
 
 .side-articles {
-    width: 30%;
+    width: 30%; /* Set width for side articles */
 }
 
 .article h3 a {
-    text-decoration: none;
-    color: #d63031;
+    text-decoration: none; /* Remove underline */
+    color: #d63031; /* Set link color */
 }
 
 .article p {
-    font-size: 14px;
-    color: #555;
+    font-size: 14px; /* Set font size */
+    color: #555; /* Set text color */
 }
 
 /* News Feed */
 .news-feed {
-    margin-top: 30px;
+    margin-top: 30px; /* Add margin for spacing */
 }
 
 .news-item {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Add separator between news items */
+    padding: 10px 0; /* Add spacing */
 }
 
 .news-item h3 a {
-    text-decoration: none;
-    color: #d63031;
+    text-decoration: none; /* Remove underline */
+    color: #d63031; /* Set link color */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .top-news {
-        flex-direction: column;
+        flex-direction: column; /* Stack news articles vertically */
     }
     .main-article, .side-articles {
-        width: 100%;
+        width: 100%; /* Set full width for smaller screens */
     }
     header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stack header elements */
+        text-align: center; /* Center-align text */
     }
     nav ul {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: column; /* Stack navigation items */
+        gap: 5px; /* Reduce spacing */
     }
 }
 
+/* Table Styles */
 table {
-    width: 60%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-th {
-    background-color: #008000;
-    color: white;
-}
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-tr:hover {
-    background-color: #d4edda;
-}
-h2 {
-    text-align: center;
+    width: 60%; /* Set table width */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse; /* Remove space between borders */
+    background: white; /* Set background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }
 
+th, td {
+    padding: 12px; /* Add padding */
+    border: 1px solid #ddd; /* Add border */
+    text-align: center; /* Center-align text */
+}
+
+th {
+    background-color: #008000; /* Set header background color */
+    color: white; /* Set text color */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row background color */
+}
+
+tr:hover {
+    background-color: #d4edda; /* Highlight row on hover */
+}
+
+h2 {
+    text-align: center; /* Center-align heading */
+}
+
+/* News Ticker */
 .news-ticker-container {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    overflow: hidden;
-    position: relative;
+    width: 100%; /* Set full width */
+    background-color: #333; /* Set background color */
+    color: white; /* Set text color */
+    overflow: hidden; /* Hide overflowing text */
+    position: relative; /* Set relative positioning */
 }
+
 .news-ticker {
-    display: flex;
-    white-space: nowrap;
-    animation: scroll-left 20s linear infinite;
+    display: flex; /* Use flexbox */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: scroll-left 20s linear infinite; /* Apply scrolling animation */
 }
+
 .news-ticker div {
-    padding: 20px;
-    margin-right: 50px;
-    font-size: 18px;
+    padding: 20px; /* Add padding */
+    margin-right: 50px; /* Add spacing between items */
+    font-size: 18px; /* Set font size */
 }
+
+/* Scrolling Animation */
 @keyframes scroll-left {
     from {
-        transform: translateX(100%);
+        transform: translateX(100%); /* Start position off-screen */
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* End position off-screen */
     }
 }
 
-.updateevent { font-family: Arial, sans-serif;   text-align: center; }
-    .slider-container { width: 80%; margin: auto; overflow: hidden; position: relative; }
+/* Update Event Section */
+.updateevent { 
+    font-family: Arial, sans-serif; /* Set font style */
+    text-align: center; /* Center-align text */
+}
 
-        .slides { display: flex; transition: transform 0.5s ease-in-out; }
-        .slide { min-width: 100%; box-sizing: border-box; padding: 20px; background: #ebebeb; border-radius: 2px; text-align: center; }
-        .countdown { font-size: 24px; font-weight: bold; margin-top: 10px; }
-        .buttons { margin-top: 10px; }
-        .buttons button { padding: 10px 15px; margin: 5px; cursor: pointer; }
-     
+/* Slider Container */
+.slider-container { 
+    width: 80%; /* Set width */
+    margin: auto; /* Center the container */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Set relative positioning */
+}
+
+/* Slides */
+.slides { 
+    display: flex; /* Use flexbox */
+    transition: transform 0.5s ease-in-out; /* Add smooth transition */
+}
+
+.slide { 
+    min-width: 100%; /* Ensure slides take full width */
+    box-sizing: border-box; /* Include padding and borders in width */
+    padding: 20px; /* Add padding */
+    background: #ebebeb; /* Set background color */
+    border-radius: 2px; /* Add slight border radius */
+    text-align: center; /* Center-align text */
+}
+
+/* Countdown Timer */
+.countdown { 
+    font-size: 24px; /* Set font size */
+    font-weight: bold; /* Set bold font */
+    margin-top: 10px; /* Add spacing */
+}
+
+/* Buttons */
+.buttons { 
+    margin-top: 10px; /* Add spacing */
+}
+
+.buttons button { 
+    padding: 10px 15px; /* Set padding */
+    margin: 5px; /* Add spacing between buttons */
+    cursor: pointer; /* Set cursor to pointer */
+}

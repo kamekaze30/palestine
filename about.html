@@ -17,270 +17,281 @@
 
         
 
-        body {
-            font-family: "Raleway", sans-serif;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-            height: 100px;
-        }
+/* Basic styling for the body */
+body {
+    font-family: "Raleway", sans-serif; /* Set font family */
+    background-color: #ffffff; /* White background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100px; /* Set height of the body */
+}
 
+/* Styling for the first content section */
+.content1 {
+    display: flex; /* Enable flexbox */
+    align-items: stretch; /* Ensure all items have the same height */
+    gap: 20px; /* Space between the left and right items */
+}
 
-        .content1 {
-            display: flex;
-            align-items: stretch; /* Pastikan semua item dalam flex mempunyai tinggi yang sama */
-            gap: 20px; /* Jarak antara left dan right */ 
-        }
+/* Styling for left and right columns in the first section */
+.left, .right {
+    flex: 1; /* Allow each column to take equal space */
+    display: flex; /* Enable flexbox for the columns */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center content vertically */
+}
 
-        .left, .right {
-            flex: 1; 
-            display: flex;
-            flex-direction: column; 
-            justify-content: center; 
-        }
+/* Additional styling for the right column */
+.right {
+    padding: 20px; /* Add padding */
+    margin-left: 5px; /* Left margin */
+    margin-right: 30px; /* Right margin */
+}
 
-        .right {
-            padding: 20px;
-            margin-left: 5px;  /* Jarak dari kiri */
-            margin-right: 30px; /* Jarak dari kanan */
-        }
+/* Styling for the image in the left column */
+.left img {
+    width: 100%; /* Make image fill the container width */
+    height: 100%; /* Make image fill the container height */
+    object-fit: cover; /* Ensure image doesn't stretch and fills properly */
+}
 
-        .left img {
-            width: 100%; /* Pastikan gambar muat dalam kotak */
-            height: 100%; /* Pastikan gambar memenuhi kotak */
-            object-fit: cover; /* Elakkan gambar jadi herot */
-            
-        }
+/* Styling for the second section (About section) */
+.second_about {
+    padding: 70px; /* Add padding around the text */
+    margin: 20px; /* Add margin */
+    text-indent: 1.5em; /* Indent the first line of text */
+}
 
-        .second_about {
-            padding: 70px;
-            margin: 20px;
-            text-indent: 1.5em; /* Guna unit em untuk fleksibiliti */
+/* Styling for the second content section */
+.content2 {
+    display: flex; /* Enable flexbox */
+    align-items: stretch; /* Ensure all items have the same height */
+    gap: 20px; /* Space between the left and right items */
+    background-color: rgb(41, 41, 41); /* Dark background color */
+    color: white; /* Set text color to white */
+}
 
-        }
+/* Styling for headings in the second content section */
+.content2 h3 {
+    color: #f4f4f4; /* Light color for headings */
+}
 
-        .content2 {
-            display: flex;
-            align-items: stretch; /* Pastikan semua item dalam flex mempunyai tinggi yang sama */
-            gap: 20px; /* Jarak antara left dan right */ 
-            background-color: rgb(41, 41, 41);
-            color: white;
-        }
+/* Styling for left and right columns in the second content section */
+.left2, .right2 {
+    flex: 1; /* Allow both columns to take equal space */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center content vertically */
+}
 
-        .content2 h3 {
-            color: #f4f4f4;
-        }
+/* Styling for the left column in the second section */
+.left2 {
+    padding: 70px; /* Add padding */
+    text-align: center; /* Center text */
+}
 
-        .left2, .right2 {
-            flex: 1; 
-            display: flex;
-            flex-direction: column; 
-            justify-content: center; 
-        }
+/* Styling for the video in the right column */
+.right2 video {
+    width: 100%; /* Make video fill the container width */
+    height: 100%; /* Make video fill the container height */
+}
 
-        .left2 {
-            padding: 70px;
-            text-align: center;
-        }
+/* Styling for the third content section */
+.content3 {
+    display: flex; /* Enable flexbox */
+    align-items: stretch; /* Ensure all items have the same height */
+    gap: 5px; /* Space between the left and right items */
+}
 
-        .right2 video {
-            width: 100%; /* Pastikan gambar muat dalam kotak */
-            height: 100%; /* Pastikan gambar memenuhi kotak */  
-        }
+/* Styling for left and right columns in the third content section */
+.left3, .right3 { 
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center content vertically */
+}
 
-        .content3 {
-            display: flex;
-            align-items: stretch; /* Pastikan semua item dalam flex mempunyai tinggi yang sama */
-            gap: 5px; /* Jarak antara left dan right */ 
-        }
+/* Additional styling for the left column in the third section */
+.left3 {
+    flex: 4; /* Take more space compared to the right column */
+    margin-left: 100px; /* Left margin */
+    text-align: center; /* Center text */
+}
 
-        .left3, .right3 { 
-            display: flex;
-            flex-direction: column; 
-            justify-content: center; 
-        }
+/* Styling for the list items in the left column */
+.left3 ul {
+    display: flex; /* Enable flexbox for the list */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the items */
+    gap: 15px; /* Space between items */
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+}
 
-        .left3 {
-            flex: 4;
-           margin-left: 100px;
-            text-align: center;
-        }
+/* Styling for individual list items */
+.left3 ul li {
+    width: calc(50% - 10px); /* Two items per row */
+    padding: 10px; /* Add padding */
+    text-align: left; /* Align text to the left */
+    position: relative; /* For positioning the icon before text */
+    padding-left: 40px; /* Space between the icon and the text */
+}
 
-        
+/* Adding an icon before each list item */
+.left3 ul li::before {
+    content: ""; /* Empty content for the icon */
+    position: absolute; /* Absolute positioning */
+    left: 0; /* Position to the left */
+    top: 5px; /* Position slightly down */
+    width: 40px; /* Width of the icon */
+    height: 40px; /* Height of the icon */
+    background-image: url('img/icon.png'); /* Icon image */
+    background-size: contain; /* Ensure the icon is contained within the box */
+    background-repeat: no-repeat; /* Don't repeat the icon */
+}
 
-        .left3 ul {
-            display: flex;
-            flex-wrap: wrap; /* Pastikan item turun ke baris kedua */
-            justify-content: center; /* Pusatkan item */
-            gap: 15px; /* Jarak antara item */
-            list-style: none; /* Buang default bullet */
-            padding: 0;
-        }
+/* Styling for the right column in the third content section */
+.right3 {
+    flex: none; /* Allow the right column to have a fixed size */
+    text-align: center; /* Center text */
+}
 
-        .left3 ul li {
-            width: calc(50% - 10px); /* 2 item dalam satu baris */
-            padding: 10px;
-            text-align: left;
-            position: relative; /* Supaya ikon boleh diletakkan sebelum teks */
-            padding-left: 40px; /* Jarak antara ikon dan teks */
-        }
+/* Styling for the box in the right column */
+.right3 .box {
+    max-width: 350px; /* Maximum width of the box */
+    padding: 20px; /* Add padding inside the box */
+    background-color: #f8f9fa; /* Light background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow effect */
+    text-align: center; /* Center the text inside the box */
+    margin: 90px; /* Add margin to center the box */
+}
 
-        /* Tambah ikon gambar sebelum setiap item */
-        .left3 ul li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 40px; /* Saiz ikon */
-            height: 40px;
-            background-image: url('img/icon.png'); /* Gantikan dengan ikon kau */
-            background-size: contain;
-            background-repeat: no-repeat;
-            
-        }
+/* Styling for the heading inside the right box */
+.right3 h3 {
+    font-size: 22px; /* Set font size */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark color for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
 
-        .right3 {
-            flex: none;
+/* Styling for paragraphs inside the right box */
+.right3 p {
+    font-size: 14px; /* Set font size */
+    color: #555; /* Medium gray text color */
+    line-height: 1.6; /* Line spacing for readability */
+}
 
-            text-align: center;
-        }
-        
-        
-        .right3 .box {
-            max-width: 350px; /* Lebar maksimum */
-            padding: 20px;
-            background-color: #f8f9fa; /* Warna latar lembut */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Bayang untuk efek timbul */
-            text-align: center;
-            margin: 90px; /* Pusatkan */
-        }
+/* Styling for the button inside the right box */
+.right3 .button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 12px 30px; /* Padding around the button */
+    text-decoration: none; /* Remove underline from the link */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center the text */
+    margin-top: auto; /* Push the button to the bottom */
+    display: inline-block; /* Display as inline-block */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor */
+    transition: 0.3s; /* Smooth transition for hover effect */
+}
 
-        /* Styling for the title */
-        .right3 h3 {
-            font-size: 22px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-        }
+/* Styling for the button when hovered */
+.right3 .button:hover {
+    background-color: #218838; /* Darker green on hover */
+    color: white; /* Ensure the text stays white */
+    text-decoration: none; /* Ensure no underline */
+}
 
-        /* Styling for the paragraph */
-        .right3 p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* Styling for the button */
-        .right3 .button {
-            background-color: #4CAF50;
-                    color: white;
-                    padding: 12px 30px;
-                    text-decoration: none;
-                    font-weight: bold;
-                
-                    text-align: center;
-                    margin-top: auto;
-                    display: inline-block;
-                    border: none;
-                    cursor: pointer;
-                    transition: 0.3s;
-        }
-
-        .right3 .button:hover {
-            
-            background-color: #218838;
-            color: white;
-            text-decoration: none;
-        }
-
-
-        /* Responsive Design */
+/* Responsive design for screens less than 1024px */
 @media screen and (max-width: 1024px) {
     .content1, .content2, .content3 {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center all items */
     }
-    
+
     .left, .right, .left2, .right2, .left3, .right3 {
-        flex: none;
-        width: 100%;
-        text-align: center;
+        flex: none; /* Remove flex growth */
+        width: 100%; /* Make each column take full width */
+        text-align: center; /* Center text */
     }
 
     .right {
-        margin-left: 0;
-        margin-right: 0;
-        padding: 20px;
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        padding: 20px; /* Add padding */
     }
 
     .second_about {
-        padding: 40px;
-        margin: 10px;
+        padding: 40px; /* Adjust padding */
+        margin: 10px; /* Adjust margin */
     }
 
     .left2 {
-        padding: 40px;
+        padding: 40px; /* Adjust padding */
     }
 
     .left3 {
-        margin-left: 0;
+        margin-left: 0; /* Remove left margin */
     }
 
     ul li {
-        width: 100%;
-        text-align: center;
-        padding-left: 0;
+        width: 100%; /* List items take full width */
+        text-align: center; /* Center text */
+        padding-left: 0; /* Remove left padding */
     }
 
     ul li::before {
-        display: none;
+        display: none; /* Hide the icon */
     }
 
     .right3 .box {
-        margin: 30px auto;
+        margin: 30px auto; /* Center the box */
     }
 }
 
+/* Responsive design for screens less than 768px */
 @media screen and (max-width: 768px) {
     .content1, .content2, .content3 {
-        gap: 10px;
+        gap: 10px; /* Reduce gap between items */
     }
 
     .right, .left, .left2, .right2, .left3, .right3 {
-        padding: 15px;
+        padding: 15px; /* Adjust padding */
     }
 
     .right3 .box {
-        max-width: 280px;
-        padding: 15px;
+        max-width: 280px; /* Reduce box width */
+        padding: 15px; /* Reduce padding */
     }
 
     .right3 .button {
-        padding: 10px 20px;
-        font-size: 14px;
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 14px; /* Adjust font size */
     }
 }
 
+/* Responsive design for screens less than 480px */
 @media screen and (max-width: 480px) {
     .second_about {
-        padding: 20px;
-        margin: 5px;
+        padding: 20px; /* Reduce padding */
+        margin: 5px; /* Reduce margin */
     }
-    
+
     .left2 {
-        padding: 20px;
+        padding: 20px; /* Reduce padding */
     }
 
     .right3 .box {
-        max-width: 250px;
-        padding: 10px;
+        max-width: 250px; /* Further reduce box width */
+        padding: 10px; /* Further reduce padding */
     }
 
     .right3 .button {
-        padding: 8px 16px;
-        font-size: 12px;
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 12px; /* Adjust font size */
     }
 }
+
     
        </style>
 
